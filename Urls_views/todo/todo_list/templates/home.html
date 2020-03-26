@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for names in name %}
+
+Hello world!!!! {{ names }} <br>
+
+{% endfor %}
+
+<form action="/todo_list/register" method="post">
+     {% csrf_token %}
+    <input type="text" name='name' placeholder="Enter user name"><br>
+
+    <input type="email" name='email' placeholder=" Enter email Id"><br>
+
+    <input type="password" placeholder="Enter password"><br>
+
+    <input type="submit" ><br>
+
+</form>
+<br>
+<a href="/todo_list/new_page">
+<button> To New Page</button>
+</a>
+</body>
+</html>
